@@ -49,27 +49,27 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="bg-portfolio-gray-light" ref={sectionRef}>
+    <section id="skills" className="bg-portfolio-gray-light dark:bg-gray-800" ref={sectionRef}>
       <div className="section-container">
-        <h2 className="section-title">Skills</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title dark:after:bg-blue-400">Skills</h2>
+        <p className="section-subtitle dark:text-gray-300">
           A comprehensive overview of my technical expertise and professional competencies.
         </p>
         
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-xl font-bold text-portfolio-primary mb-6">Technical Skills</h3>
+            <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Technical Skills</h3>
             
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-portfolio-accent">{skill.level}%</span>
+                    <span className="font-medium dark:text-gray-200">{skill.name}</span>
+                    <span className="text-portfolio-accent dark:text-blue-400">{skill.level}%</span>
                   </div>
-                  <div className="skill-bar">
+                  <div className="skill-bar dark:bg-gray-700">
                     <div 
-                      className="skill-progress"
+                      className="skill-progress dark:bg-blue-500"
                       style={{ 
                         width: isVisible ? `${skill.level}%` : '0%',
                         transitionDelay: `${index * 0.1}s`
@@ -83,12 +83,12 @@ const Skills = () => {
           
           <div>
             <div className="mb-10">
-              <h3 className="text-xl font-bold text-portfolio-primary mb-6">Frameworks & Tools</h3>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Frameworks & Tools</h3>
               <div className="flex flex-wrap gap-3">
                 {frameworks.map((framework, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-2 bg-white rounded-lg shadow-sm text-portfolio-primary border border-gray-100 hover:border-portfolio-accent transition-colors"
+                    className="px-4 py-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-portfolio-primary dark:text-white border border-gray-100 dark:border-gray-600 hover:border-portfolio-accent dark:hover:border-blue-400 transition-colors"
                   >
                     {framework}
                   </span>
@@ -97,12 +97,12 @@ const Skills = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-portfolio-primary mb-6">Soft Skills</h3>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Soft Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {softSkills.map((skill, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-2 bg-portfolio-accent text-white rounded-lg shadow-sm"
+                    className="px-4 py-2 bg-portfolio-accent dark:bg-blue-600 text-white rounded-lg shadow-sm"
                   >
                     {skill}
                   </span>
