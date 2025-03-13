@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 64% 24%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -22,8 +25,8 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 170 80% 42%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -32,22 +35,15 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,121 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-portfolio-light text-portfolio-text font-sans antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg lg:text-xl;
+  }
+
+  h6 {
+    @apply text-base lg:text-lg;
+  }
+  
+  section {
+    @apply py-16 md:py-24;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply font-heading font-bold text-4xl mb-6 relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-1 after:bg-portfolio-accent after:bottom-0 after:left-0 pb-2;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-12 max-w-3xl;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden;
+  }
+  
+  .nav-link {
+    @apply relative px-3 py-2 text-portfolio-text hover:text-portfolio-accent transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-portfolio-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .nav-link.active {
+    @apply text-portfolio-accent after:w-full;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-portfolio-accent text-white hover:bg-portfolio-accent/90 px-4 py-2 rounded-md transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-portfolio-secondary text-portfolio-primary hover:bg-portfolio-gray-medium px-4 py-2 rounded-md transition-all;
+  }
+  
+  .btn-outline {
+    @apply border border-portfolio-accent text-portfolio-accent hover:bg-portfolio-accent hover:text-white px-4 py-2 rounded-md transition-all;
+  }
+  
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l border-portfolio-gray-medium last:border-0 before:content-[''] before:absolute before:left-[-8px] before:top-0 before:w-4 before:h-4 before:bg-portfolio-accent before:rounded-full;
+  }
+  
+  .skill-bar {
+    @apply h-3 bg-portfolio-gray-medium rounded-full overflow-hidden mb-6;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-portfolio-accent rounded-full transition-all duration-1000;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-portfolio-gray-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-portfolio-primary/30 rounded-full hover:bg-portfolio-primary/50 transition-colors;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation for page load */
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
