@@ -1,4 +1,3 @@
-
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -8,6 +7,8 @@ import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
+import Activity from '@/components/Activity';
+import Testimonials from '@/components/Testimonials';
 
 const Index = () => {
   return (
@@ -19,6 +20,8 @@ const Index = () => {
         <Projects />
         <Experience />
         <Skills />
+        <Activity />
+        <Testimonials />
         <Blog />
         <Contact />
       </div>

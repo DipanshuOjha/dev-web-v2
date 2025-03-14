@@ -1,7 +1,7 @@
-
+import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 
-const Education = () => {
+const Education: React.FC = () => {
   const educationData = [
     {
       degree: "M.Tech in Data Science",
@@ -49,10 +49,10 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="bg-white">
+    <section id="education" className="bg-white dark:bg-gray-900">
       <div className="section-container">
-        <h2 className="section-title">Education</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title dark:text-white">Education</h2>
+        <p className="section-subtitle dark:text-gray-300">
           My academic journey has equipped me with strong theoretical knowledge and practical skills in data science and machine learning.
         </p>
         
@@ -62,12 +62,12 @@ const Education = () => {
               {educationData.map((edu, index) => (
                 <div 
                   key={index} 
-                  className="card p-6 animate-fade-in-up"
+                  className="card p-6 animate-fade-in-up dark:bg-gray-800"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-portfolio-primary">{edu.degree}</h3>
-                    <span className="inline-flex items-center text-sm text-gray-500">
+                    <h3 className="text-xl font-bold text-portfolio-primary dark:text-white">{edu.degree}</h3>
+                    <span className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
                       <Calendar size={16} className="mr-1" /> {edu.period}
                     </span>
                   </div>
@@ -75,26 +75,26 @@ const Education = () => {
                   <div className="flex items-start mb-3">
                     <MapPin size={18} className="text-portfolio-accent mt-1 mr-2" />
                     <div>
-                      <p className="font-medium">{edu.institution}</p>
+                      <p className="font-medium dark:text-white">{edu.institution}</p>
                       <p className="text-sm text-portfolio-accent">{edu.score}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mt-2">{edu.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>
                 </div>
               ))}
             </div>
           </div>
           
           <div>
-            <div className="card p-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <h3 className="text-xl font-bold text-portfolio-primary mb-4">Key Courses</h3>
+            <div className="card p-6 animate-fade-in-up dark:bg-gray-800" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-4">Key Courses</h3>
               
               <div className="flex flex-wrap gap-2">
                 {courses.map((course, index) => (
                   <span 
                     key={index} 
-                    className="inline-block px-3 py-1 bg-portfolio-secondary rounded-full text-sm text-portfolio-primary"
+                    className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-sm text-portfolio-primary dark:text-white"
                   >
                     {course}
                   </span>
@@ -102,21 +102,21 @@ const Education = () => {
               </div>
             </div>
             
-            <div className="card p-6 mt-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <h3 className="text-xl font-bold text-portfolio-primary mb-4">Achievements</h3>
+            <div className="card p-6 mt-6 animate-fade-in-up dark:bg-gray-800" style={{ animationDelay: '0.5s' }}>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-4">Achievements</h3>
               
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
-                  <span>Currently Ranked 1, M.Tech Data Science, IIT Guwahati (July'23 - Present)</span>
+                  <span className="dark:text-gray-300">Currently Ranked 1, M.Tech Data Science, IIT Guwahati (July'23 - Present)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
-                  <span>Department Rank 2, Department of MEMS, IIT Bombay (July'22 - July'23)</span>
+                  <span className="dark:text-gray-300">Department Rank 2, Department of MEMS, IIT Bombay (July'22 - July'23)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
-                  <span>AIR 255, Graduate Aptitude Test in Engineering (GATE) (April'22)</span>
+                  <span className="dark:text-gray-300">AIR 255, Graduate Aptitude Test in Engineering (GATE) (April'22)</span>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
@@ -58,30 +57,30 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-portfolio-gray-light">
+    <section id="projects" className="bg-portfolio-gray-light dark:bg-gray-900">
       <div className="section-container">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title dark:text-white">Projects</h2>
+        <p className="section-subtitle dark:text-gray-300">
           A selection of my academic and personal projects showcasing my technical skills and research interests.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="card group animate-fade-in-up overflow-hidden flex flex-col h-full"
+              className="card group animate-fade-in-up overflow-hidden flex flex-col h-full dark:bg-gray-800"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="h-2 bg-portfolio-accent w-full"></div>
               <div className="p-6 flex-grow">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-bold text-portfolio-primary">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-portfolio-primary dark:text-white">{project.title}</h3>
                   {project.github && (
                     <a 
                       href={project.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-portfolio-accent transition-colors"
+                      className="text-gray-500 hover:text-portfolio-accent dark:text-gray-400 dark:hover:text-portfolio-accent transition-colors"
                       aria-label="GitHub Repository"
                     >
                       <Github size={20} />
@@ -89,28 +88,28 @@ const Projects = () => {
                   )}
                 </div>
                 
-                <div className="mb-4">
+                <div>
                   <span className="text-sm font-medium text-portfolio-accent">{project.period}</span>
-                  <p className="text-sm text-gray-500 mt-1">{project.type}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{project.type}</p>
                   {project.supervisor && (
-                    <p className="text-sm text-gray-500 mt-1">Supervisor: {project.supervisor}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Supervisor: {project.supervisor}</p>
                   )}
-                  <span className="inline-block px-2 py-1 text-xs rounded-full bg-portfolio-secondary text-portfolio-primary mt-2">
+                  <span className="inline-block px-2 py-1 text-xs rounded-full bg-portfolio-secondary dark:bg-gray-700 text-portfolio-primary dark:text-white mt-2">
                     {project.status}
                   </span>
                 </div>
                 
-                <ul className="list-disc pl-5 text-gray-600 space-y-2 mb-4">
+                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2 my-4">
                   {project.description.map((desc, i) => (
                     <li key={i}>{desc}</li>
                   ))}
                 </ul>
                 
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span 
                       key={i} 
-                      className="inline-block px-2 py-1 bg-portfolio-secondary rounded-full text-xs text-portfolio-primary"
+                      className="inline-block px-2 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-xs text-portfolio-primary dark:text-white"
                     >
                       {tech}
                     </span>
@@ -119,12 +118,12 @@ const Projects = () => {
               </div>
               
               {project.github && (
-                <div className="px-6 py-3 bg-portfolio-secondary">
+                <div className="px-6 py-3 bg-portfolio-secondary dark:bg-gray-700">
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-portfolio-primary hover:text-portfolio-accent transition-colors inline-flex items-center"
+                    className="text-sm font-medium text-portfolio-primary dark:text-white hover:text-portfolio-accent dark:hover:text-portfolio-accent transition-colors inline-flex items-center"
                   >
                     View Project <ExternalLink size={14} className="ml-1" />
                   </a>
@@ -132,6 +131,20 @@ const Projects = () => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* View More Projects Button */}
+        <div className="flex justify-center">
+          <a
+            href="https://github.com/rajput-tarun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-6 py-3 bg-portfolio-primary hover:bg-portfolio-primary/90 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-lg transition-all duration-300 hover:transform hover:translate-y-[-2px] hover:shadow-lg"
+          >
+            <Github size={20} className="transition-transform group-hover:rotate-12" />
+            <span className="font-medium">View More Projects on GitHub</span>
+            <ExternalLink size={16} className="transition-transform group-hover:translate-x-1" />
+          </a>
         </div>
       </div>
     </section>

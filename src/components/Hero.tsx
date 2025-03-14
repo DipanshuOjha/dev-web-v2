@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -13,7 +12,7 @@ const Hero = () => {
       <div className="absolute bottom-20 left-20 w-72 h-72 rounded-full bg-green-200 dark:bg-green-900/30 blur-3xl opacity-30 animate-pulse delay-700"></div>
       <div className="absolute top-1/2 left-1/3 w-80 h-80 rounded-full bg-purple-200 dark:bg-purple-900/30 blur-3xl opacity-20 animate-pulse delay-1000"></div>
       
-      <div className="section-container relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           <motion.div 
             className="md:w-1/2"
@@ -48,7 +47,7 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          <motion.div 
+          <motion.div
             className="md:w-1/2 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -61,10 +60,11 @@ const Hero = () => {
               
               {/* Profile image container */}
               <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl bg-portfolio-gray-light dark:bg-gray-700 z-10 transition-all duration-300 group-hover:scale-105">
-                {/* Replace with your image - this is a placeholder */}
-                <div className="w-full h-full bg-gradient-to-br from-portfolio-accent to-blue-500 dark:from-teal-500 dark:to-blue-600 flex items-center justify-center text-white font-bold text-4xl">
-                  TK
-                </div>
+                <img 
+                  src="/tarun_img.png"
+                  alt="Tarun Kumar"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

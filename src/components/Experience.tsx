@@ -1,4 +1,3 @@
-
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
@@ -28,10 +27,10 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="bg-white">
+    <section id="experience" className="bg-white dark:bg-gray-900">
       <div className="section-container">
-        <h2 className="section-title">Experience</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title dark:text-white">Experience</h2>
+        <p className="section-subtitle dark:text-gray-300">
           My professional journey has allowed me to apply my skills in real-world scenarios and contribute meaningfully to projects.
         </p>
         
@@ -39,24 +38,24 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={index} 
-              className="card p-6 mb-8 last:mb-0 animate-fade-in-up"
+              className="card p-6 mb-8 last:mb-0 animate-fade-in-up dark:bg-gray-800"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-portfolio-primary flex items-center">
+                  <h3 className="text-xl font-bold text-portfolio-primary dark:text-white flex items-center">
                     <Briefcase size={20} className="text-portfolio-accent mr-2" />
                     {exp.title}
                   </h3>
-                  <p className="text-lg font-medium mt-1">{exp.company}</p>
+                  <p className="text-lg font-medium mt-1 dark:text-gray-300">{exp.company}</p>
                 </div>
                 
                 <div className="flex flex-col md:items-end mt-2 md:mt-0">
-                  <div className="flex items-center text-gray-500 mb-1">
+                  <div className="flex items-center text-gray-500 dark:text-gray-400 mb-1">
                     <Calendar size={16} className="mr-1" />
                     <span>{exp.period}</span>
                   </div>
-                  <div className="flex items-center text-gray-500">
+                  <div className="flex items-center text-gray-500 dark:text-gray-400">
                     <MapPin size={16} className="mr-1" />
                     <span>{exp.location}</span>
                   </div>
@@ -64,8 +63,8 @@ const Experience = () => {
               </div>
               
               <div className="border-l-2 border-portfolio-accent pl-4 my-6">
-                <h4 className="font-medium text-portfolio-primary mb-2">Key Responsibilities & Achievements</h4>
-                <ul className="space-y-2 text-gray-600">
+                <h4 className="font-medium text-portfolio-primary dark:text-white mb-2">Key Responsibilities & Achievements</h4>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                   {exp.responsibilities.map((resp, i) => (
                     <li key={i} className="flex items-start">
                       <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
@@ -79,7 +78,7 @@ const Experience = () => {
                 {exp.skills.map((skill, i) => (
                   <span 
                     key={i} 
-                    className="inline-block px-3 py-1 bg-portfolio-secondary rounded-full text-sm text-portfolio-primary"
+                    className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-sm text-portfolio-primary dark:text-white"
                   >
                     {skill}
                   </span>

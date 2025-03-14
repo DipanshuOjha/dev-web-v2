@@ -1,5 +1,8 @@
-
 import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
+
+// Import Radar chart with dynamic import to avoid SSR issues
+const RadarChart = dynamic(() => import('./charts/RadarChart'), { ssr: false });
 
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -48,6 +51,23 @@ const Skills = () => {
     "Research", "Communication", "Time Management"
   ];
 
+  // Data for radar chart
+  const radarData = {
+    labels: ["Python", "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "PyTorch"],
+    datasets: [
+      {
+        label: 'Technical Proficiency',
+        data: [95, 90, 85, 90, 80, 85],
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(75, 192, 192, 1)'
+      }
+    ]
+  };
+
   return (
     <section id="skills" className="bg-portfolio-gray-light dark:bg-gray-800" ref={sectionRef}>
       <div className="section-container">
@@ -81,34 +101,44 @@ const Skills = () => {
             </div>
           </div>
           
-          <div>
-            <div className="mb-10">
-              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Frameworks & Tools</h3>
-              <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col">
+            <div className="card p-6 animate-fade-in-up dark:bg-gray-700" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-4">Skills Visualization</h3>
+              <div className="h-64 w-full">
+                {isVisible && <RadarChart data={radarData} />}
+              </div>
+            </div>
+            
+            <div className="card p-6 animate-fade-in-up dark:bg-gray-700 mt-6" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-4">Key Frameworks & Tools</h3>
+              
+              <div className="flex flex-wrap gap-2">
                 {frameworks.map((framework, index) => (
                   <span 
-                    key={index}
-                    className="px-4 py-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-portfolio-primary dark:text-white border border-gray-100 dark:border-gray-600 hover:border-portfolio-accent dark:hover:border-blue-400 transition-colors"
+                    key={index} 
+                    className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-sm text-portfolio-primary dark:text-white"
                   >
                     {framework}
                   </span>
                 ))}
               </div>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Soft Skills</h3>
-              <div className="flex flex-wrap gap-3">
-                {softSkills.map((skill, index) => (
-                  <span 
-                    key={index}
-                    className="px-4 py-2 bg-portfolio-accent dark:bg-blue-600 text-white rounded-lg shadow-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
+          </div>
+        </div>
+        
+        <div className="mt-10">
+          <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-6">Soft Skills</h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {softSkills.map((skill, index) => (
+              <div 
+                key={index} 
+                className="card p-4 text-center animate-fade-in-up dark:bg-gray-700" 
+                style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+              >
+                <span className="font-medium dark:text-white">{skill}</span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
