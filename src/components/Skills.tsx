@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 
-// Import Radar chart with dynamic import to avoid SSR issues
-const RadarChart = dynamic(() => import('./charts/RadarChart'), { ssr: false });
+// Import Radar chart with React.lazy instead of Next.js dynamic
+const RadarChart = lazy(() => import('./charts/RadarChart'));
 
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -105,7 +104,11 @@ const Skills = () => {
             <div className="card p-6 animate-fade-in-up dark:bg-gray-700" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-xl font-bold text-portfolio-primary dark:text-white mb-4">Skills Visualization</h3>
               <div className="h-64 w-full">
-                {isVisible && <RadarChart data={radarData} />}
+                {isVisible && (
+                  <Suspense fallback={<div className="flex items-center justify-center h-full">Loading chart...</div>}>
+                    <RadarChart data={radarData} />
+                  </Suspense>
+                )}
               </div>
             </div>
             
