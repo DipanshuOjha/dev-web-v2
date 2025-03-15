@@ -16,7 +16,7 @@ const About = () => {
               I am a Data Science and Machine Learning enthusiast with a Master's degree from IIT Guwahati. My academic journey has taken me through IIT Bombay for a PGDIIT and Aryabhatta Knowledge University for my B.Tech.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Currently, I'm working as a Data Science Intern at ARKRAY, Japan, where I'm improving medical diagnostic accuracy through advanced AI techniques. My research interests include NLP, computer vision, and developing AI solutions for healthcare applications.
+              Currently, I'm working as a Data Science Intern at ARKRAY, Japan, where I'm improving medical diagnostic accuracy through advanced AI techniques. My research interests include NLP, computer vision, and developing AI solutions for real life applications.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               I'm passionate about leveraging AI for social good and constantly exploring ways to improve model performance through innovative approaches.
