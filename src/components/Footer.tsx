@@ -22,7 +22,7 @@ const Footer = () => {
               <Mail size={18} />
             </a>
             <a 
-              href="https://github.com/username" 
+              href="https://github.com/rajput-tarun" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -31,7 +31,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a 
-              href="https://www.linkedin.com/in/username" 
+              href="https://www.linkedin.com/in/tarun-kumar-iitb/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"

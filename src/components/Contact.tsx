@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Mail, Github, Linkedin, Instagram, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbllpero"; // Replace with your Formspree endpoint
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,24 +19,42 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Error sending message",
+        description: "Please try again later or contact me directly via email.",
+        variant: "destructive",
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   
   const socialLinks = [
@@ -47,20 +67,20 @@ const Contact = () => {
     { 
       name: "GitHub",
       icon: <Github size={20} />,
-      url: "https://github.com/tarunkumar",
-      handle: "tarunkumar"
+      url: "https://github.com/rajput-tarun",
+      handle: "rajput-tarun"
     },
     { 
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      url: "https://www.linkedin.com/in/tarunkumar",
-      handle: "tarunkumar"
+      url: "https://www.linkedin.com/in/tarun-kumar-iitb/",
+      handle: "tarun-kumar-iitb"
     },
     { 
       name: "Instagram",
       icon: <Instagram size={20} />,
-      url: "https://www.instagram.com/tarunkumar",
-      handle: "@tarunkumar"
+      url: "https://www.instagram.com/rajpoot_tarun_singh/",
+      handle: "rajpoot_tarun_singh"
     }
   ];
 
