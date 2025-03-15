@@ -8,7 +8,7 @@ const Education: React.FC = () => {
       institution: "Indian Institute of Technology, Guwahati",
       period: "2023-Present",
       score: "CGPA: 9.20",
-      description: "Currently pursuing Master's in Data Science with focus on NLP and healthcare AI applications."
+      description: "Specializing in Data Science with focus on machine learning, deep learning, and natural language processing."
     },
     {
       degree: "PGDIIT",
@@ -22,7 +22,7 @@ const Education: React.FC = () => {
       institution: "Aryabhatta Knowledge University",
       period: "2018-2022",
       score: "CGPA: 8.62",
-      description: "Bachelor's degree with strong foundation in computer science and engineering concepts."
+      description: "Developed strong foundation in engineering principles and technical skills."
     },
     {
       degree: "Senior Secondary",
