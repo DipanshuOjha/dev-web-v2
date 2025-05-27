@@ -6,27 +6,28 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      name: "Dr. Gaurav Trivedi",
-      role: "Associate Professor, IIT Guwahati",
-      image: "/images/testimonials/gaurav-trivedi.jpg", // Replace with actual image
-      text: "Tarun has demonstrated exceptional skills in machine learning and NLP during his thesis work. His ability to quickly grasp complex concepts and implement innovative solutions sets him apart. His work on data augmentation techniques for NLP tasks has shown promising results and reflects his deep understanding of the field."
-    },
-    {
-      name: "Dr. Teena Sharma",
-      role: "Assistant Professor, MFSDSAI, IIT Guwahati",
-      image: "/images/testimonials/teena-sharma.jpg", // Replace with actual image
+      name: "Mr. Diganta Diasi",
+      role: "Research Scolar, Data Science Lab, IIT Guwahati",
+      image: "digata.jpg", // Replace with actual image
       text: "I've had the pleasure of supervising Tarun's research work. His analytical thinking and methodical approach to problem-solving are impressive. He consistently delivers high-quality work and shows great potential as a researcher in the field of data science and AI."
     },
     {
-      name: "Akihiko Takahashi",
-      role: "Senior Data Scientist, ARKRAY Japan",
+      name: "Dr. Gaurav Trivedi",
+      role: "Professor, IIT Guwahati",
+      image: "", // Replace with actual image
+      text: "Tarun has demonstrated exceptional skills in machine learning and NLP during his thesis work. His ability to quickly grasp complex concepts and implement innovative solutions sets him apart. His work on data augmentation techniques for NLP tasks has shown promising results and reflects his deep understanding of the field."
+    },
+    
+    {
+      name: "Tapan Mahata",
+      role: "Senior Data Scientist",
       image: "/images/testimonials/akihiko-takahashi.jpg", // Replace with actual image
       text: "Working with Tarun on medical imaging projects has been a rewarding experience. His contributions to improving our diagnostic models have been significant. He brings a unique perspective to the team and has a talent for finding efficient solutions to complex problems."
     },
     {
-      name: "Priya Sharma",
+      name: "Viplav Prakash",
       role: "Team Lead, Saathi Counselling Cell",
-      image: "/images/testimonials/priya-sharma.jpg", // Replace with actual image
+      image: "vip.jpg", // Replace with actual image
       text: "Tarun's leadership at Saathi has transformed our mentorship program. His data-driven approach to student counselling has significantly improved our engagement metrics. Beyond his technical skills, his empathy and commitment to student well-being make him an invaluable team member."
     }
   ];
