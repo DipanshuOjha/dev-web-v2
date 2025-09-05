@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -27,24 +27,66 @@ const Hero = () => {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-md">
               A passionate Data Scientist and Machine Learning Engineer with expertise in NLP, Mathematical Modeling, Statistics, Computer Vision, and Generative AI
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <motion.a 
                 href="#about" 
-                className="btn btn-primary transition-all duration-300 hover:translate-y-[-3px] hover:shadow-lg"
+                className="btn btn-primary transition-all duration-300 hover:translate-y-[-3px] hover:shadow-lg group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Discover More
+                <span>Discover More</span>
+                <ArrowDown className="ml-2 w-4 h-4 transition-transform group-hover:translate-y-1" />
               </motion.a>
               <motion.a 
                 href="#contact" 
-                className="btn btn-outline transition-all duration-300 hover:translate-y-[-3px] hover:shadow-lg"
+                className="btn btn-outline transition-all duration-300 hover:translate-y-[-3px] hover:shadow-lg group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Me
+                <Mail className="mr-2 w-4 h-4" />
+                <span>Contact Me</span>
               </motion.a>
             </div>
+            
+            {/* Social Links */}
+            <motion.div 
+              className="flex gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <motion.a
+                href="https://github.com/rajput-tarun"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-portfolio-accent dark:hover:text-portfolio-accent"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/tarun-kumar-iitb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-portfolio-accent dark:hover:text-portfolio-accent"
+                whileHover={{ scale: 1.1, rotate: -5 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.button
+                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-portfolio-accent dark:hover:text-portfolio-accent"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Download Resume"
+                onClick={() => window.open('https://drive.google.com/file/d/1VM7FuQU9u-PPT1WcFYGZvlng5BUdbdQn/view?usp=sharing', '_blank')}
+              >
+                <Download className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
           </motion.div>
           
           <motion.div
@@ -53,19 +95,43 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 group">
-              {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-300 to-purple-400 dark:from-pink-600 dark:to-purple-700 blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              <div className="absolute inset-2 rounded-full bg-gradient-to-r from-blue-300 to-teal-300 dark:from-blue-600 dark:to-teal-600 blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 group cursor-pointer">
+              {/* Animated decorative rings */}
+              <motion.div 
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-300 to-purple-400 dark:from-pink-600 dark:to-purple-700 blur-md opacity-30"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+              <motion.div 
+                className="absolute inset-2 rounded-full bg-gradient-to-r from-blue-300 to-teal-300 dark:from-blue-600 dark:to-teal-600 blur-md opacity-30"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              />
+              
+              {/* Floating particles */}
+              <motion.div
+                className="absolute top-4 right-8 w-2 h-2 bg-portfolio-accent rounded-full"
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute bottom-8 left-4 w-3 h-3 bg-blue-400 rounded-full"
+                animate={{ y: [10, -10, 10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              />
               
               {/* Profile image container */}
-              <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl bg-portfolio-gray-light dark:bg-gray-700 z-10 transition-all duration-300 group-hover:scale-105">
+              <motion.div 
+                className="absolute inset-4 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl bg-portfolio-gray-light dark:bg-gray-700 z-10"
+                whileHover={{ scale: 1.05, rotateY: 10 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img 
                   src="/tarun_img.png" loading="eager" fetchPriority="high" decoding="async"
                   alt="Tarun Kumar — Data Scientist"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

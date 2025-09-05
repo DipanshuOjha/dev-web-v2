@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Calendar, User, Trophy, Lightbulb } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -66,86 +67,187 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {projects.map((project, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className="card group animate-fade-in-up overflow-hidden flex flex-col h-full dark:bg-gray-800"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="card group overflow-hidden flex flex-col h-full dark:bg-gray-800 hover:shadow-2xl transition-all duration-500 border-l-4 border-transparent hover:border-portfolio-accent"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              viewport={{ once: true }}
             >
-              <div className="h-2 bg-portfolio-accent w-full"></div>
+              <motion.div 
+                className="h-2 bg-gradient-to-r from-portfolio-accent to-blue-500 w-full"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
+                viewport={{ once: true }}
+              />
               <div className="p-6 flex-grow">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-bold text-portfolio-primary dark:text-white">{project.title}</h3>
+                <div className="flex justify-between items-start mb-4">
+                  <motion.h3 
+                    className="text-xl font-bold text-portfolio-primary dark:text-white group-hover:text-portfolio-accent transition-colors duration-300"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {project.title}
+                  </motion.h3>
                   {project.github && (
-                    <a 
+                    <motion.a 
                       href={project.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-portfolio-accent dark:text-gray-400 dark:hover:text-portfolio-accent transition-colors"
+                      className="text-gray-500 hover:text-portfolio-accent dark:text-gray-400 dark:hover:text-portfolio-accent transition-all duration-300 p-2 rounded-full hover:bg-portfolio-accent/10"
                       aria-label="GitHub Repository"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       <Github size={20} />
-                    </a>
+                    </motion.a>
                   )}
                 </div>
                 
-                <div>
-                  <span className="text-sm font-medium text-portfolio-accent">{project.period}</span>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{project.type}</p>
+                <motion.div 
+                  className="space-y-2 mb-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center text-sm font-medium text-portfolio-accent">
+                    <Calendar size={14} className="mr-2" />
+                    {project.period}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <Lightbulb size={14} className="mr-2" />
+                    {project.type}
+                  </div>
                   {project.supervisor && (
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Supervisor: {project.supervisor}</p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                      <User size={14} className="mr-2" />
+                      Supervisor: {project.supervisor}
+                    </div>
                   )}
-                  <span className="inline-block px-2 py-1 text-xs rounded-full bg-portfolio-secondary dark:bg-gray-700 text-portfolio-primary dark:text-white mt-2">
+                  <motion.span 
+                    className={`inline-flex items-center px-3 py-1 text-xs rounded-full font-medium ${
+                      project.status === 'Completed' 
+                        ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' 
+                        : 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400'
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Trophy size={12} className="mr-1" />
                     {project.status}
-                  </span>
-                </div>
+                  </motion.span>
+                </motion.div>
                 
-                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2 my-4">
+                <motion.ul 
+                  className="space-y-3 my-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
+                  viewport={{ once: true }}
+                >
                   {project.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span 
+                    <motion.li 
                       key={i} 
-                      className="inline-block px-2 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-xs text-portfolio-primary dark:text-white"
+                      className="flex items-start text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 + 0.6 + i * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-3 flex-shrink-0"></span>
+                      <span>{desc}</span>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+                
+                <motion.div 
+                  className="flex flex-wrap gap-2"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.7 }}
+                  viewport={{ once: true }}
+                >
+                  {project.technologies.map((tech, i) => (
+                    <motion.span 
+                      key={i} 
+                      className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-xs text-portfolio-primary dark:text-white hover:bg-portfolio-accent hover:text-white dark:hover:bg-portfolio-accent cursor-pointer transition-all duration-300"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 + 0.8 + i * 0.05 }}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      viewport={{ once: true }}
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
-                </div>
+                </motion.div>
               </div>
               
               {project.github && (
-                <div className="px-6 py-3 bg-portfolio-secondary dark:bg-gray-700">
-                  <a 
+                <motion.div 
+                  className="px-6 py-3 bg-portfolio-secondary dark:bg-gray-700 group-hover:bg-portfolio-accent/10 dark:group-hover:bg-portfolio-accent/20 transition-all duration-300"
+                  whileHover={{ backgroundColor: "rgba(26, 188, 156, 0.1)" }}
+                >
+                  <motion.a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-portfolio-primary dark:text-white hover:text-portfolio-accent dark:hover:text-portfolio-accent transition-colors inline-flex items-center"
+                    className="text-sm font-medium text-portfolio-primary dark:text-white hover:text-portfolio-accent dark:hover:text-portfolio-accent transition-colors inline-flex items-center group/link"
+                    whileHover={{ x: 5 }}
                   >
-                    View Project <ExternalLink size={14} className="ml-1" />
-                  </a>
-                </div>
+                    View Project 
+                    <motion.div
+                      whileHover={{ x: 3 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ExternalLink size={14} className="ml-2" />
+                    </motion.div>
+                  </motion.a>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* View More Projects Button */}
-        <div className="flex justify-center">
-          <a
+        <motion.div 
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <motion.a
             href="https://github.com/rajput-tarun"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-6 py-3 bg-portfolio-primary hover:bg-portfolio-primary/90 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-lg transition-all duration-300 hover:transform hover:translate-y-[-2px] hover:shadow-lg"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-portfolio-primary to-portfolio-accent hover:from-portfolio-accent hover:to-blue-600 dark:from-blue-600 dark:to-portfolio-accent text-white rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl relative overflow-hidden"
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <Github size={20} className="transition-transform group-hover:rotate-12" />
-            <span className="font-medium">View More Projects on GitHub</span>
-            <ExternalLink size={16} className="transition-transform group-hover:translate-x-1" />
-          </a>
-        </div>
+            <motion.div
+              className="absolute inset-0 bg-white/10"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.6 }}
+            />
+            <motion.div
+              whileHover={{ rotate: 12, scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Github size={22} />
+            </motion.div>
+            <span className="font-semibold text-lg relative z-10">View More Projects on GitHub</span>
+            <motion.div
+              whileHover={{ x: 5, scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ExternalLink size={18} />
+            </motion.div>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
