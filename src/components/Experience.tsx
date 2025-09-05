@@ -3,10 +3,22 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
+      title: "Data Scientist",
+      company: "DHL Supply Chain",
+      location: "Remote",
+      period: "2025 - Present",
+      responsibilities: [
+        "Optimising supply chain operations using ML, DL, and mathematical modelling.",
+        "Building predictive and optimization models to improve planning, inventory, and logistics efficiency.",
+        "Collaborating cross-functionally to translate business problems into data-driven solutions."
+      ],
+      skills: ["Machine Learning", "Deep Learning", "Mathematical Modelling", "Optimization", "Supply Chain", "Python"]
+    },
+    {
       title: "Data Science Intern",
       company: "ARKRAY, Japan",
       location: "Remote",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - July 2025",
       responsibilities: [
         "Improved mAP by 5% for urine sediment analysis by integrating attention mechanisms like CBAM into YOLOX, enhancing diagnostic accuracy across 7 classes.",
         "Optimized the object detection pipeline, reducing detection time by 15% and enhancing efficiency in medical laboratory testing."

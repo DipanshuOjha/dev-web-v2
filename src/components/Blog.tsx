@@ -3,9 +3,9 @@ import { Calendar, Trophy } from 'lucide-react';
 const Blog = () => {
   const achievements = [
     {
-      title: "Currently Ranked 1 in M.Tech Data Science",
+      title: "Department Rank 1, M.Tech Data Science",
       date: "July 2023 - Present",
-      description: "Maintaining the top position in the M.Tech Data Science program at IIT Guwahati through consistent academic excellence and research contributions.",
+      description: "Maintained the top position in the M.Tech Data Science program at IIT Guwahati through consistent academic excellence and research contributions.",
       category: "Academic"
     },
     {

@@ -6,7 +6,7 @@ const About = () => {
       <div className="section-container">
         <h2 className="section-title dark:text-white">About Me</h2>
         <p className="section-subtitle dark:text-gray-300">
-          A passionate data scientist and machine learning engineer with expertise in NLP, computer vision, and AI applications for healthcare.
+         Data Scientist and ML Engineer with a strong foundation in mathematical modeling and statistics, and hands-on experience in NLP, computer vision, and generative AI. Passionate about building intelligent, data-driven solutions across diverse domains.
         </p>
         
         <div className="mt-12 grid md:grid-cols-2 gap-10">
@@ -16,7 +16,9 @@ const About = () => {
               I am a Data Science and Machine Learning enthusiast with a Master's degree from IIT Guwahati. My academic journey has taken me through IIT Bombay for a PGDIIT and Aryabhatta Knowledge University for my B.Tech.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Currently, I'm working as a Data Science Intern at ARKRAY, Japan, where I'm improving medical diagnostic accuracy through advanced AI techniques. My research interests include NLP, computer vision, and developing AI solutions for real life applications.
+             Currently working as a Data Scientist at DHL Supply Chain, where I focus on supply chain optimization using machine learning and integrate Generative AI for automation and intelligent analytics.
+             Previously, I interned at ARKRAY Inc., Japan, as part of the R&D team, where I worked on medical imaging and developed novel attention mechanisms to enhance object detection performance.
+             My core interests include Stats, ML, NLP, computer vision, generative AI, and building practical AI solutions for real-world problems.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               I'm passionate about leveraging AI for social good and constantly exploring ways to improve model performance through innovative approaches.
@@ -40,7 +42,7 @@ const About = () => {
               </div>
               <h4 className="font-bold text-xl mb-2 dark:text-white">Experience</h4>
               <p className="text-gray-600 dark:text-gray-300">
-                Data Science Intern at ARKRAY, Japan, improving diagnostic accuracy with AI.
+                Data Scientist at DHL Supply Chain — Optimising supply chain with ML, DL, and mathematical modelling. Previously, Data Science Intern at ARKRAY, Japan.
               </p>
             </div>
             

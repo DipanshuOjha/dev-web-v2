@@ -25,7 +25,7 @@ const Hero = () => {
               Tarun Kumar
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-md">
-              A passionate Data Scientist and Machine Learning Engineer specializing in NLP and AI applications for healthcare.
+              A passionate Data Scientist and Machine Learning Engineer with expertise in NLP, Mathematical Modeling, Statistics, Computer Vision, and Generative AI
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.a 
@@ -61,8 +61,8 @@ const Hero = () => {
               {/* Profile image container */}
               <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl bg-portfolio-gray-light dark:bg-gray-700 z-10 transition-all duration-300 group-hover:scale-105">
                 <img 
-                  src="/tarun_img.png"
-                  alt="Tarun Kumar"
+                  src="/tarun_img.png" loading="eager" fetchPriority="high" decoding="async"
+                  alt="Tarun Kumar — Data Scientist"
                   className="w-full h-full object-cover"
                 />
               </div>

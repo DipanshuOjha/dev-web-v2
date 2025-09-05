@@ -6,9 +6,9 @@ const Education: React.FC = () => {
     {
       degree: "M.Tech in Data Science",
       institution: "Indian Institute of Technology, Guwahati",
-      period: "2023-Present",
-      score: "CGPA: 9.20",
-      description: "Specializing in Data Science with focus on machine learning, deep learning, and natural language processing."
+      period: "2023-2025",
+      score: "CGPA: 9.37",
+      description: "Specializing in Data Science with a focus on machine learning, deep learning, and natural language processing. Recognized as the Department Topper for academic excellence."
     },
     {
       degree: "PGDIIT",
@@ -108,7 +108,7 @@ const Education: React.FC = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
-                  <span className="dark:text-gray-300">Currently Ranked 1, M.Tech Data Science, IIT Guwahati (July'23 - Present)</span>
+                  <span className="dark:text-gray-300">Department Rank 1, M.Tech Data Science, IIT Guwahati (July'23 - Jun'25)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-portfolio-accent mt-2 mr-2"></span>
