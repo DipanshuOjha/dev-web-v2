@@ -13,7 +13,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const { theme, setTheme } = useTheme();
+
   const isDarkMode = theme === "dark";
+  
   
   const toggleTheme = () => {
     setTheme(isDarkMode ? "light" : "dark");
