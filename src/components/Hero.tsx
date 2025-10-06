@@ -22,10 +22,10 @@ const Hero = () => {
           >
             <p className="text-portfolio-accent font-medium mb-2">Hello, I'm</p>
             <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-portfolio-primary via-portfolio-accent to-blue-500 dark:from-blue-400 dark:via-teal-400 dark:to-purple-500 mb-4">
-              Tarun Kumar
+              Dev Wankhede
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-md">
-              A passionate Data Scientist and Machine Learning Engineer with expertise in NLP, Mathematical Modeling, Statistics, Computer Vision, and Generative AI
+              A passionate Data Scientist and Machine Learning Engineer with expertise in NLP, Deep Learning, Statistics, Computer Vision, and Generative AI
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <motion.a 
@@ -56,7 +56,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <motion.a
-                href="https://github.com/rajput-tarun"
+                href="https://github.com/PrepStation201"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-portfolio-accent dark:hover:text-portfolio-accent"
@@ -67,7 +67,7 @@ const Hero = () => {
                 <Github className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href="https://www.linkedin.com/in/tarun-kumar-iitb/"
+                href="https://www.linkedin.com/in/dev-wankhede-45233b201/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-portfolio-accent dark:hover:text-portfolio-accent"
@@ -82,7 +82,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Download Resume"
-                onClick={() => window.open('https://drive.google.com/file/d/1VM7FuQU9u-PPT1WcFYGZvlng5BUdbdQn/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1v5ocf0DabTjpCzruJTt8PijLtBS2mEgo/view?usp=drivesdk', '_blank')}
               >
                 <Download className="w-5 h-5" />
               </motion.button>
@@ -127,7 +127,7 @@ const Hero = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="/tarun_img.png" loading="eager" fetchPriority="high" decoding="async"
+                  src="/dev_w.jpg" loading="eager" fetchPriority="high" decoding="async"
                   alt="Tarun Kumar — Data Scientist"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />

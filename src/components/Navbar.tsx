@@ -44,13 +44,13 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home', icon: Home },
     { name: 'About', href: '#about', icon: User },
-    { name: 'Education', href: '#education', icon: GraduationCap },
+    // { name: 'Education', href: '#education', icon: GraduationCap },
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Experience', href: '#experience', icon: Briefcase },
-    { name: 'Skills', href: '#skills', icon: Code },
-    { name: 'Activity', href: '#activity', icon: Activity },
-    { name: 'Testimonials', href: '#testimonials', icon: MessageSquare },
-    { name: 'Blog', href: '#blog', icon: BookOpen },
+    // { name: 'Skills', href: '#skills', icon: Code },
+    // { name: 'Activity', href: '#activity', icon: Activity },
+    // { name: 'Testimonials', href: '#testimonials', icon: MessageSquare },
+    // { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 

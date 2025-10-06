@@ -9,20 +9,20 @@ const Footer = () => {
       <div className="section-container">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="text-center md:text-left mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Tarun Kumar</h3>
+            <h3 className="text-2xl font-bold mb-2">Dev Wankhede</h3>
             <p className="text-gray-300">Data Scientist & ML Engineer</p>
           </div>
           
           <div className="flex space-x-4">
             <a 
-              href="mailto:t.kumar@iitg.ac.in" 
+              href="mailto:dev.wankhede@iitg.ac.in" 
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               aria-label="Email"
             >
               <Mail size={18} />
             </a>
             <a 
-              href="https://github.com/rajput-tarun" 
+              href="https://github.com/PrepStation201" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -31,7 +31,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a 
-              href="https://www.linkedin.com/in/tarun-kumar-iitb/" 
+              href="https://www.linkedin.com/in/dev-wankhede-45233b201/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -44,7 +44,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} Tarun Kumar. All rights reserved.
+            &copy; {currentYear} Dev Wankhede. All rights reserved.
           </p>
           
           <a 

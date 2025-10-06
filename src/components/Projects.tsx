@@ -4,56 +4,56 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: "Optimizing Downstream NLP Tasks through Data Augmentation with LLMs",
-      period: "June'24 - Present",
-      type: "Master's Thesis",
-      supervisor: "Dr. Gaurav Trivedi (Dept. of EEE) and Dr. Teena Sharma (MFSDSAI), IIT Guwahati",
+      title: "SmartCut : AI/ML in macromachining processes",
+      period: "July'25 - Present",
+      type: "Master's Thesis Project, IIT Guwahati",
+      supervisor: "Prof. Rinku Mittal (CICPS), IIT Guwahati",
       status: "Ongoing",
       description: [
-        "Designed advanced data augmentation techniques to enhance model performance in downstream NLP tasks by fine-tuning language models on datasets like SST-2 and EMOTION.",
-        "Achieved a 5% improvement in overall accuracy on the SST dataset by implementing Conditional Augmentation using RoBERTa and Llama-3.3-70B, surpassing baseline performance."
+        "Implemented an end-to-end pipeline to predict machining surface roughness (Ra), achieving a 0.97 R² score with a Gradient Boosting Regressor after comprehensive EDA and Feature Engineering.",
+        "Executed comparative model evaluation (Logistic Regression,Random Forest, SVR, Gradient Boosting), achieveing 0.85% of accuracy ensuring optimal model selection and performance to estimate surface roughness."
       ],
-      technologies: ["NLP", "LLMs", "RoBERTa", "Llama-3", "Data Augmentation"],
+      technologies: ["ML", "Random-forest", "SVR", "Genetic Algorithm", "Data Augmentation"],
       github: null
     },
     {
       title: "Care Vision AI: Disease Detection on Medical Imaging Datasets",
-      period: "Jan'24 - May'24",
+      period: "March'25",
       type: "Course Project, IIT Guwahati",
-      supervisor: null,
+       supervisor: "Prof. P.K. Bora(DoD), IIT Guwahati",
       status: "Completed",
       description: [
-        "Built AI models for detecting medical conditions like skin cancer, brain tumors, lung cancer, and pneumonia using CNN, SVM, Random Forest, and morphological operations.",
+        "Engineered a deep learning system for multi-class brain tumor classification, achieving 99.36% accuracy by applying transfer learning across advanced architectures (VGG16, ResNet-50, EfficientNet B0. ViT).",
         "Enhanced Recall by 4% using Transfer Learning with the ResNet50 architecture and designed a user-friendly web application integrating these models seamlessly, enabling efficient real-time detection and diagnosis."
       ],
       technologies: ["Computer Vision", "CNN", "ResNet50", "Transfer Learning", "Medical Imaging"],
-      github: "https://github.com/username/care-vision-ai"
+      github: "https://github.com/PrepStation201/Care-Vision-AI"
     },
     {
-      title: "Large Language Model Based Healthcare Assistant",
-      period: "Jan'24 - Apr'24",
+      title: "MedAI : Healthcare Assistant",
+      period: "April'25",
       type: "Course Project, IIT Guwahati",
-      supervisor: null,
+      supervisor: "Prof. Niraj Sharma(MFSDSAI), IIT Guwahati",
       status: "Completed",
       description: [
-        "Fine-tuned Llama2-7b model on a custom dataset from the Medical Encyclopedia to develop a healthcare chatbot.",
+        "Fine-tuned Qwen2.5-7B model on a custom dataset from the Medical Encyclopedia to develop a healthcare chatbot.",
         "Employed QLoRA, 4-bit quantization, and Hugging Face libraries for parameter-efficient fine-tuning, resulting in 50% lower RAM usage and 400% faster training times, significantly optimizing resource utilization."
       ],
-      technologies: ["LLMs", "Llama2", "QLoRA", "Healthcare", "NLP"],
-      github: "https://github.com/username/llm-healthcare-assistant"
+      technologies: ["LLMs", "Qwen2.5-7B", "QLoRA", "RAG", "NLP"],
+      github: "https://github.com/PrepStation201/qwen-medical-CHATBOT"
     },
     {
-      title: "Steel Industry Energy Consumption Classification",
-      period: "Aug'23 - Nov'23",
+      title: "Moodify : Hybrid Music Recommendation System",
+      period: "July'25 - Sep'25",
       type: "Course Project",
-      supervisor: "Dr. Prithwijit Guha, Dept. of EEE, IIT Guwahati",
+      supervisor: "Prof. Chiranjeeb Sur(MFSDSAI), IIT Guwahati",
       status: "Completed",
       description: [
-        "Performed Exploratory Data Analysis on electricity consumption data from a steel plant with 35,000+ entries, and built machine learning models using Logistic Regression, Random Forest, ANN, SVM, and Naive Bayes.",
-        "Optimized the Random Forest model's performance through hyperparameter tuning, achieving an F1 score of 0.98."
+        "Built a hybrid recommendation engine combining collaborative filtering (SVD, 0.91 RMSE) with content-based filtering (KNN on Spotify audio features), to improve the quality of recommendation (82% Precision@10)",
+        "Engineered an intelligent music system with sentiment analysis by fine-tuning DistilBERT model on the GoEmotions dataset(by Google), achieving a 93% F1 score for context-aware music selection"
       ],
-      technologies: ["Machine Learning", "Random Forest", "EDA", "Classification", "Energy Consumption"],
-      github: "https://github.com/username/steel-industry-energy"
+      technologies: ["Machine Learning", "SVD", "KNN", "LLM", "NLP"],
+      github: "https://github.com/PrepStation201/mood-based-music-recommendation-system"
     }
   ];
 
@@ -220,7 +220,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://github.com/rajput-tarun"
+            href="https://github.com/PrepStation201"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-portfolio-primary to-portfolio-accent hover:from-portfolio-accent hover:to-blue-600 dark:from-blue-600 dark:to-portfolio-accent text-white rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl relative overflow-hidden"

@@ -16,13 +16,13 @@ const Index = () => {
       <div className="page-transition">
         <Hero />
         <About />
-        <Education />
+        {/* <Education /> */}
         <Projects />
         <Experience />
-        <Skills />
+        {/* <Skills />
         <Activity />
         <Testimonials />
-        <Blog />
+        <Blog /> */}
         <Contact />
       </div>
     </Layout>

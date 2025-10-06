@@ -113,26 +113,26 @@ const Contact = () => {
     { 
       name: "Email",
       icon: <Mail size={20} />,
-      url: "mailto:t.kumar@iitg.ac.in",
-      handle: "t.kumar@iitg.ac.in"
+      url: "mailto:dev.wankhede@iitg.ac.in",
+      handle: "dev.wankhede@iitg.ac.in"
     },
     { 
       name: "GitHub",
       icon: <Github size={20} />,
-      url: "https://github.com/rajput-tarun",
-      handle: "rajput-tarun"
+      url: "https://github.com/PrepStation201",
+      handle: "dev-wankhede"
     },
     { 
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      url: "https://www.linkedin.com/in/tarun-kumar-iitb/",
-      handle: "tarun-kumar-iitb"
+      url: "https://www.linkedin.com/in/dev-wankhede-45233b201/",
+      handle: "dev-wankhede"
     },
     { 
-      name: "Instagram",
+      name: "Hugging Face",
       icon: <Instagram size={20} />,
-      url: "https://www.instagram.com/rajpoot_tarun_singh/",
-      handle: "rajpoot_tarun_singh"
+      url: "https://huggingface.co/PrepStation201",
+      handle: "dev-wankhede"
     }
   ];
 

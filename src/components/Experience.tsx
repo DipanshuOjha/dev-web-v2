@@ -3,38 +3,15 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Data Scientist",
-      company: "DHL Supply Chain",
-      location: "Remote",
-      period: "2025 - Present",
-      responsibilities: [
-        "Optimising supply chain operations using ML, DL, and mathematical modelling.",
-        "Building predictive and optimization models to improve planning, inventory, and logistics efficiency.",
-        "Collaborating cross-functionally to translate business problems into data-driven solutions."
-      ],
-      skills: ["Machine Learning", "Deep Learning", "Mathematical Modelling", "Optimization", "Supply Chain", "Python"]
-    },
-    {
-      title: "Data Science Intern",
-      company: "ARKRAY, Japan",
-      location: "Remote",
-      period: "Jan 2025 - July 2025",
-      responsibilities: [
-        "Improved mAP by 5% for urine sediment analysis by integrating attention mechanisms like CBAM into YOLOX, enhancing diagnostic accuracy across 7 classes.",
-        "Optimized the object detection pipeline, reducing detection time by 15% and enhancing efficiency in medical laboratory testing."
-      ],
-      skills: ["Computer Vision", "YOLOX", "Attention Mechanisms", "Medical Imaging", "Object Detection"]
-    },
-    {
-      title: "Associate Head",
-      company: "Saathi Counselling Cell, IIT Guwahati",
+      title: "Department Placement Representative",
+      company: "CICPS, IIT Guwahati",
       location: "IIT Guwahati",
-      period: "Apr 2023 - Present",
+      period: "May 2025 - Present",
       responsibilities: [
-        "Implemented a data-driven feedback system for 1600+ students, boosting mentor-mentee engagement by 65%.",
-        "Managed a team of 13 to coordinate with 200+ mentors, handle feedback, and enhance students' mental well-being."
+        "Managed placement activities by serving as a primary liaison between the student body (MTech CICPS department) the College Placement Team for a smooth and effective communication.",
+        "Initiated corporate outreach, successfully onboarding several new companies for campus recruitment for the first time in IIT Guwahati through Center for Career Development (CCD).",
       ],
-      skills: ["Leadership", "Team Management", "Data-Driven Systems", "Student Counselling", "Mental Health Support"]
+      skills: ["Leadership", "Team Management", "Data-Driven Systems", "Smooth Communication"]
     }
   ];
 

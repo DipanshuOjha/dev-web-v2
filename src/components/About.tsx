@@ -7,7 +7,7 @@ const About = () => {
       <div className="section-container">
         <h2 className="section-title dark:text-white">About Me</h2>
         <p className="section-subtitle dark:text-gray-300">
-         Data Scientist and ML Engineer with a strong foundation in mathematical modeling and statistics, and hands-on experience in NLP, computer vision, and generative AI. Passionate about building intelligent, data-driven solutions across diverse domains.
+         Data Scientist and ML Engineer with a strong foundation in Deep Learning and statistics, and hands-on experience in NLP, computer vision, and generative AI. Passionate about building intelligent, data-driven solutions across diverse domains.
         </p>
         
         <div className="mt-12 grid md:grid-cols-2 gap-10">
@@ -31,7 +31,8 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  I am a Data Science and Machine Learning enthusiast with a Master's degree from IIT Guwahati. My academic journey has taken me through IIT Bombay for a PGDIIT and Aryabhatta Knowledge University for my B.Tech.
+                  I am a Data Science and Machine Learning enthusiast with a Master's degree from IIT Guwahati. Passionate about solving real world problems and developing end-to-end solutions, from data pre-processing to model deployment.
+
                 </motion.p>
                 <motion.p 
                   className="text-gray-600 dark:text-gray-300 leading-relaxed"
@@ -40,8 +41,7 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                 Currently working as a Data Scientist at DHL Supply Chain, where I focus on supply chain optimization using machine learning and integrate Generative AI for automation and intelligent analytics.
-                 Previously, I interned at ARKRAY Inc., Japan, as part of the R&D team, where I worked on medical imaging and developed novel attention mechanisms to enhance object detection performance.
+                 In one year of my course work at IIT Guwahati, I have made many real time projects. From building a healthcare chatbot using RAG to Brain tumor classification using CNNs, I have explored various domains and techniques in AI/ML. Developing a hybrid music recommendation system using collaborative and content-based filtering was one of my favorite projects.
                 </motion.p>
                 <motion.p 
                   className="text-gray-600 dark:text-gray-300 leading-relaxed"
@@ -64,20 +64,20 @@ const About = () => {
               viewport={{ once: true }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">9.20</div>
+                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">7.50</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">M.Tech CGPA</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">5%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">mAP Improvement</div>
+                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">7.04</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">B.Tech CGPA</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">1600+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Students Impacted</div>
+                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">65.38%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">HSC</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">65%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Engagement Boost</div>
+                <div className="text-2xl font-bold text-portfolio-accent dark:text-portfolio-accent">87.20%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">SSC</div>
               </div>
             </motion.div>
           </motion.div>
@@ -105,7 +105,7 @@ const About = () => {
               </motion.div>
               <h4 className="font-bold text-xl mb-2 dark:text-white group-hover:text-portfolio-accent transition-colors">Education</h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                M.Tech at IIT Guwahati with 9.20 CGPA and PGDIIT from IIT Bombay with 9.27 CGPA.
+                M.Tech at IIT Guwahati in Robotics and Artificial intelligence with 7.50 CGPA under CICPS department. B.Tech in ECE from GEC Aurangabad with 7.04 CGPA.
               </p>
             </motion.div>
             
@@ -123,9 +123,14 @@ const About = () => {
               >
                 <Briefcase size={40} />
               </motion.div>
-              <h4 className="font-bold text-xl mb-2 dark:text-white group-hover:text-portfolio-accent transition-colors">Experience</h4>
+              <h4 className="font-bold text-xl mb-2 dark:text-white group-hover:text-portfolio-accent transition-colors">Soft Skills</h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                Data Scientist at DHL Supply Chain — Optimising supply chain with ML, DL, and mathematical modelling. Previously, Data Science Intern at ARKRAY, Japan.
+                <ul>
+                  <li>Communication skill</li>
+                  <li>Colaborative and Teamwork</li>
+                  <li>Problem solving approach</li>
+                  <li>Analytical thinking</li>
+                </ul>
               </p>
             </motion.div>
             
@@ -145,7 +150,7 @@ const About = () => {
               </motion.div>
               <h4 className="font-bold text-xl mb-2 dark:text-white group-hover:text-portfolio-accent transition-colors">Research</h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                Focused on NLP tasks, data augmentation with LLMs, and medical imaging analysis.
+                Focused on NLP tasks, data augmentation with LLMs, RAG implementation, LangChain and medical imaging analysis.
               </p>
             </motion.div>
             
